@@ -43,5 +43,5 @@ if (invalidMailData === false && mailSymbolCheck === 1) {
   }
 
 } else {
-  mailMsg.innerHTML = 'Nome e-mail Non valido, reinserire i dati';
+  mailMsg.innerHTML = 'Indirizzo e-mail Non valido, reinserire i dati';
 }
