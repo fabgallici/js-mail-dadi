@@ -13,23 +13,25 @@ var mailMsg = document.getElementById('mail-msg');
 
 //Inizializz variabili controlli sulla mail inserita dall'utente
 var invalidMailData = false;
-var mailInvalidChar = ['[', ']', '(', ')', '#', ',', '?', '|', "\\", '*'];
+var mailSymbolCheck = 0;
+var mailInvalidChar = ['[', ']', '(', ')', '#', ',', '?', '|', "\\", '*', '$', '!', '£','%'];
 var mailSymbol = '@';
-//Inizio controlli su dati inseriti dall'utenet
+//Inizio controlli su dati inseriti dall'utenet:
+//Non deve contenere nessun carattere speciale e deve avere una sola chiocciola
 for (var a = 0; a < userMail.length; a++) {
   for (var b = 0; b < mailInvalidChar.length; b++) {
     if (mailInvalidChar[b] === userMail[a]) {
-      mailMsg.innerHTML = 'Nome e-mail Non valido, reinserire i dati';
       var invalidMailData = true;
     }
   }
+  if (userMail[a] === mailSymbol) {
+    mailSymbolCheck++;
+  }
 
-  // console.log(userMail[a]);
 }
-// var mailInvalidChar = ['\[', '\]', '(', ')', '#', ',', '?', '|', '\', '\*'];
-// console.log(mailInvalidChar);
+//controllo validità dati, a seguire
 //controllo che la mail sia inserita nella lista di chi può accedere e visualizzo un messaggio appropriato
-if (invalidMailData === false) {
+if (invalidMailData === false && mailSymbolCheck === 1) {
   for (var i = 0; i < mailList.length; i++) {
     if (userMail === mailList[i]) {
       mailMsg.innerHTML = 'la tua mail ' + userMail + ' risulta registrata e ti è consentito l\'accesso';
@@ -40,4 +42,6 @@ if (invalidMailData === false) {
     mailMsg.innerHTML = 'La tua mail non risulta registrata e ti viene negato l\'accesso';
   }
 
+} else {
+  mailMsg.innerHTML = 'Nome e-mail Non valido, reinserire i dati';
 }
