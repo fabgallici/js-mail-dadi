@@ -13,10 +13,10 @@ var mailMsg = document.getElementById('mail-msg');
 //controllo che la mail sia inserita nella lista di chi può accedere e visualizzo un messaggio appropriato
 for (var i = 0; i < mailList.length; i++) {
   if (userMail === mailList[i]) {
-    mailMsg.innerHTML = ('la tua mail ' + userMail + ' risulta registrata e ti è consentito l\'accesso');
+    mailMsg.innerHTML = 'la tua mail ' + userMail + ' risulta registrata e ti è consentito l\'accesso';
     mailCheck = true;
   }
 }
 if (mailCheck === false) {
-  mailMsg.innerHTML = ('La tua mail non risulta registrata e ti viene negato l\'accesso');
+  mailMsg.innerHTML = 'La tua mail non risulta registrata e ti viene negato l\'accesso';
 }
