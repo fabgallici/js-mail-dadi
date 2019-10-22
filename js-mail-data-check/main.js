@@ -14,7 +14,7 @@ var mailMsg = document.getElementById('mail-msg');
 //Inizializz variabili controlli sulla mail inserita dall'utente
 var invalidMailData = false;
 var mailSymbolCheck = 0;
-var mailInvalidChar = ['[', ']', '(', ')', '#', ',', '?', '|', "\\", '*', '$', '!', '£','%'];
+var mailInvalidChar = ['[', ']', '(', ')', '#', ',', '?', '|', "\\", '*', '$', '!', '£','%', ' ', '/'];
 var mailSymbol = '@';
 //Inizio controlli su dati inseriti dall'utenet:
 //Non deve contenere nessun carattere speciale e deve avere una sola chiocciola
