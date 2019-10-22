@@ -3,8 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+p {
+  font-family: 'Audiowide', cursive;
+}
 h2 {
   padding: 20px 0;
+  font-style: italic;
+  text-decoration: underline;
 }
 .page-wrapper {
   width: 80%;
@@ -23,8 +31,9 @@ h2 {
 .divider {
   width: 100%;
   margin: 30px auto;
-  height: 2px;
-  background-color: #000;
+  height: 6px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 .mult-dice {
   width: 70%;
