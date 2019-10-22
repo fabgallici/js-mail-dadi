@@ -10,7 +10,7 @@ var randomDiceImg2 = "assets/img/dice" + rndNum2 + ".png";
 var dice1img = document.getElementById('dice1');
 var dice2img = document.getElementById('dice2');
 
-dice1img.setAttribute("src", randomDiceImg1);
+dice1img.setAttribute("src", randomDiceImg1); // cambio attributo src con nome immagine
 dice2img.setAttribute("src", randomDiceImg2);
 
 
