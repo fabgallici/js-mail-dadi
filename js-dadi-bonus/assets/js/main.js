@@ -5,6 +5,15 @@
 var rndNum1 = Math.floor(Math.random() * 6) + 1;
 var rndNum2 = Math.floor(Math.random() * 6) + 1;
 
+var randomDiceImg1 = "assets/img/dice" + rndNum1 + ".png"; //dice1.png - dice6.png
+var randomDiceImg2 = "assets/img/dice" + rndNum2 + ".png";
+var dice1img = document.getElementById('dice1');
+var dice2img = document.getElementById('dice2');
+
+dice1img.setAttribute("src", randomDiceImg1);
+dice2img.setAttribute("src", randomDiceImg2);
+
+
 //var con id output
 var winner = document.getElementById('winner');
 //confronto per determinare il numero più alto e quindi il vincitore

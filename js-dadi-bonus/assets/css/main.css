@@ -3,15 +3,30 @@
   margin: 0;
   box-sizing: border-box;
 }
+h2 {
+  padding: 20px 0;
+}
 .page-wrapper {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 30px;
+  font-size: 18px;
+}
+.dice {
+  display: inline-block;
+  margin: 20px;
+}
+.dice img {
+  width: 100%;
 }
 .divider {
   width: 100%;
   margin: 30px auto;
   height: 2px;
   background-color: #000;
+}
+.mult-dice {
+  width: 70%;
+  margin: auto;
 }
